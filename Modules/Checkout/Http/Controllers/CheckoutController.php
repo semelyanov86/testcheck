@@ -50,6 +50,7 @@ class CheckoutController extends Controller
      */
     public function store(StoreOrderRequest $request, CustomerService $customerService, OrderService $orderService)
     {
+
         if (auth()->guest() && $request->create_an_account) {
             $customerService->register($request)->login();
         }

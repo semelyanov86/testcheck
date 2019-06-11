@@ -5,6 +5,7 @@ namespace Modules\User\Admin;
 use Modules\Admin\Ui\Tab;
 use Modules\Admin\Ui\Tabs;
 use Modules\User\Entities\Role;
+use Modules\Contract\Entities\Contract;
 use Modules\User\Repositories\Permission;
 
 class UserTabs extends Tabs
@@ -30,10 +31,12 @@ class UserTabs extends Tabs
                 'email',
                 'activated',
                 'roles',
+                'contracts',
             ]);
 
             $tab->view('user::admin.users.tabs.account', [
                 'roles' => Role::list(),
+                'contracts' => Contract::list(),
             ]);
         });
     }

@@ -35,5 +35,6 @@ return [
     'line_total' => 'Line Total',
     'subtotal' => 'Subtotal',
     'coupon' => 'Coupon',
+    'contract' => 'Contract',
     'total' => 'Total',
 ];

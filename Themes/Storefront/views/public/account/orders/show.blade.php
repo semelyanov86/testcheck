@@ -36,6 +36,11 @@
                                 </tr>
 
                                 <tr>
+                                    <td>{{ trans('storefront::account.view_order.contract') }}:</td>
+                                    <td>{{ $order->contract->name }}</td>
+                                </tr>
+
+                                <tr>
                                     <td>{{ trans('storefront::account.view_order.payment_method') }}:</td>
                                     <td>{{ $order->payment_method }}</td>
                                 </tr>

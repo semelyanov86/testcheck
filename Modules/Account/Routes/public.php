@@ -8,6 +8,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('account/orders', 'AccountOrderController@index')->name('account.orders.index');
     Route::get('account/orders/{id}', 'AccountOrderController@show')->name('account.orders.show');
+    Route::get('account/orders/{id}/edit', 'AccountOrderController@edit')->name('account.orders.edit');
 
     Route::get('account/wishlist', 'AccountWishlistController@index')->name('account.wishlist.index');
     Route::delete('account/wishlist/{productId}', 'AccountWishlistController@destroy')->name('account.wishlist.destroy');

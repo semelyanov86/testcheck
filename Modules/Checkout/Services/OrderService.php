@@ -64,6 +64,7 @@ class OrderService
             'shipping_method' => Cart::shippingMethod()->name(),
             'shipping_cost' => Cart::shippingCost()->amount(),
             'coupon_id' => Cart::coupon()->id(),
+            'contract_id' => Cart::contract()->id,
             'discount' => Cart::discount()->amount(),
             'total' => Cart::total()->amount(),
             'payment_method' => $request->payment_method,

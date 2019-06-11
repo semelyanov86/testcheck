@@ -3,10 +3,12 @@
 use FleetCart\FleetCart;
 use Modules\Support\Locale;
 use Modules\Currency\Currency;
+use Modules\Contract\Contract;
 use Modules\Support\RTLDetector;
 use Illuminate\Support\Collection;
 use Illuminate\Support\ViewErrorBag;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Session;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 if (! function_exists('str_between')) {
@@ -330,5 +332,39 @@ if (! function_exists('array_reset_index')) {
         }
 
         return $array;
+    }
+}
+
+if (! function_exists('contracts')) {
+    /**
+     * Reset numeric index of an array recursively.
+     *
+     * @param array $array
+     * @return array|\Illuminate\Support\Collection
+     *
+     * @see https://stackoverflow.com/a/12399408/5736257
+     */
+    function contracts()
+    {
+        $contract = new Contract();
+
+        return Contract::all();
+    }
+}
+
+if (! function_exists('contract_current')) {
+    /**
+     * Reset numeric index of an array recursively.
+     *
+     * @param array $array
+     * @return array|\Illuminate\Support\Collection
+     *
+     * @see https://stackoverflow.com/a/12399408/5736257
+     */
+    function contract_current()
+    {
+        $value = Session::get("CurrentContract");
+
+        return $value;
     }
 }

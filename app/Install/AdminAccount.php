@@ -38,6 +38,11 @@ class AdminAccount
             'admin.roles.create' => true,
             'admin.roles.edit' => true,
             'admin.roles.destroy' => true,
+            // contracts
+            'admin.contracts.index' => true,
+            'admin.contracts.create' => true,
+            'admin.contracts.edit' => true,
+            'admin.contracts.destroy' => true,
             // products
             'admin.products.index' => true,
             'admin.products.create' => true,

@@ -4,6 +4,7 @@
         {{ Form::text('last_name', trans('user::attributes.users.last_name'), $errors, $user, ['required' => true]) }}
         {{ Form::email('email', trans('user::attributes.users.email'), $errors, $user, ['required' => true]) }}
         {{ Form::select('roles', trans('user::attributes.users.roles'), $errors, $roles, $user, ['multiple' => true, 'required' => true, 'class' => 'selectize prevent-creation']) }}
+        {{ Form::select('contracts', trans('contract::contracts.contract'), $errors, $contracts, $user, ['multiple' => true, 'required' => false, 'class' => 'selectize prevent-creation']) }}
 
         @if (request()->routeIs('admin.users.create'))
             {{ Form::password('password', trans('user::attributes.users.password'), $errors, null, ['required' => true]) }}

@@ -12,6 +12,7 @@ return [
         'password' => 'Password',
         'password_confirmation' => 'Confirm Password',
         'roles' => 'Roles',
+        'contracts' => 'Contracts',
         'activated' => 'Status',
         'new_password' => 'New Password',
         'new_password_confirmation' => 'Confirm New Password',

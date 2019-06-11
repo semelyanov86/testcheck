@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "25f38cad7a52dfb28f8a2d1fe1fc12a4",
+    "content-hash": "f0433f76ace4bdafb938d6b693746d6a",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -633,22 +633,22 @@
         },
         {
             "name": "darryldecode/cart",
-            "version": "4.0.2",
+            "version": "4.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/darryldecode/laravelshoppingcart.git",
-                "reference": "4a0f066c15e93fd2e030e20aef56400a44604396"
+                "reference": "6b172fa2852b2e85307160743f9310b76d97710b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/darryldecode/laravelshoppingcart/zipball/4a0f066c15e93fd2e030e20aef56400a44604396",
-                "reference": "4a0f066c15e93fd2e030e20aef56400a44604396",
+                "url": "https://api.github.com/repos/darryldecode/laravelshoppingcart/zipball/6b172fa2852b2e85307160743f9310b76d97710b",
+                "reference": "6b172fa2852b2e85307160743f9310b76d97710b",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*",
-                "illuminate/translation": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*",
-                "illuminate/validation": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*",
+                "illuminate/support": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*",
+                "illuminate/translation": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*",
+                "illuminate/validation": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*",
                 "php": ">=5.4.0"
             },
             "require-dev": {
@@ -688,29 +688,28 @@
                 "laravel",
                 "shopping cart"
             ],
-            "time": "2019-02-08T14:21:36+00:00"
+            "time": "2019-03-03T14:08:24+00:00"
         },
         {
             "name": "dimsav/laravel-translatable",
-            "version": "v9.3.0",
+            "version": "v9.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dimsav/laravel-translatable.git",
-                "reference": "36c729fd40d070c2fda89b47bcfca731c703505f"
+                "reference": "bf40613d36e48638fa62728d887bd221ef923bf7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dimsav/laravel-translatable/zipball/36c729fd40d070c2fda89b47bcfca731c703505f",
-                "reference": "36c729fd40d070c2fda89b47bcfca731c703505f",
+                "url": "https://api.github.com/repos/dimsav/laravel-translatable/zipball/bf40613d36e48638fa62728d887bd221ef923bf7",
+                "reference": "bf40613d36e48638fa62728d887bd221ef923bf7",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "5.6.*|5.7.*",
+                "illuminate/support": "5.6.*|5.7.*|5.8.*",
                 "php": ">=7.1.3"
             },
             "require-dev": {
-                "orchestra/testbench": "3.6.*|3.7.*",
-                "phpunit/phpunit": "~7.0"
+                "orchestra/testbench": "3.6.*|3.7.*|3.8.*"
             },
             "type": "library",
             "extra": {
@@ -733,7 +732,14 @@
                 {
                     "name": "Dimitrios Savvopoulos",
                     "email": "ds@dimsav.com",
-                    "homepage": "http://dimsav.com"
+                    "homepage": "http://dimsav.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Tom Witkowski",
+                    "email": "dev.gummibeer@gmail.com",
+                    "homepage": "https://gummibeer.de",
+                    "role": "Developer"
                 }
             ],
             "description": "A Laravel package for multilingual models",
@@ -743,7 +749,7 @@
                 "laravel",
                 "translation"
             ],
-            "time": "2019-02-03T13:22:06+00:00"
+            "time": "2019-06-03T06:52:37+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1968,28 +1974,28 @@
         },
         {
             "name": "laravel/socialite",
-            "version": "v4.0.3",
+            "version": "v4.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/socialite.git",
-                "reference": "25eea36010c4e714c58a4792ef52b0a8e8a9c21c"
+                "reference": "f92e15a8ba4dfd730cddc775a7c1ca2251f30cff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/socialite/zipball/25eea36010c4e714c58a4792ef52b0a8e8a9c21c",
-                "reference": "25eea36010c4e714c58a4792ef52b0a8e8a9c21c",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/f92e15a8ba4dfd730cddc775a7c1ca2251f30cff",
+                "reference": "f92e15a8ba4dfd730cddc775a7c1ca2251f30cff",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/guzzle": "~6.0",
-                "illuminate/contracts": "~5.7",
-                "illuminate/http": "~5.7",
-                "illuminate/support": "~5.7",
+                "illuminate/http": "~5.7.0|~5.8.0|~5.9.0",
+                "illuminate/support": "~5.7.0|~5.8.0|~5.9.0",
                 "league/oauth1-client": "~1.0",
                 "php": "^7.1.3"
             },
             "require-dev": {
+                "illuminate/contracts": "~5.7.0|~5.8.0|~5.9.0",
                 "mockery/mockery": "~1.0",
                 "phpunit/phpunit": "~7.0"
             },
@@ -2028,7 +2034,7 @@
                 "laravel",
                 "oauth"
             ],
-            "time": "2019-01-21T12:35:13+00:00"
+            "time": "2019-04-02T17:06:04+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -2415,11 +2421,22 @@
         },
         {
             "name": "league/omnipay",
-            "version": "v3.0.1",
+            "version": "v3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/omnipay.git",
+                "reference": "9e10d91cbf84744207e13d4483e79de39b133368"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/omnipay/zipball/9e10d91cbf84744207e13d4483e79de39b133368",
+                "reference": "9e10d91cbf84744207e13d4483e79de39b133368",
+                "shasum": ""
+            },
             "require": {
                 "omnipay/common": "^3",
                 "php": "^5.6|^7",
-                "php-http/guzzle6-adapter": "^1.1"
+                "php-http/guzzle6-adapter": "^1.1|^2"
             },
             "require-dev": {
                 "omnipay/tests": "^3"
@@ -2444,58 +2461,15 @@
                     "email": "barryvdh@gmail.com"
                 }
             ],
-            "description": "Includes Omnipay payment processing library and all officially supported gateways",
+            "description": "Omnipay payment processing library",
             "homepage": "https://omnipay.thephpleague.com/",
             "keywords": [
-                "2checkout",
-                "2co",
-                "auth.net",
-                "authorize",
-                "authorize.net",
-                "buckaroo",
-                "cardsave",
-                "checkoutcom",
-                "coinbase",
-                "commweb",
-                "cybersource",
-                "dps",
-                "egate",
-                "eway",
-                "express",
-                "first data",
-                "firstdata",
-                "gateway",
-                "gocardless",
-                "ideal",
-                "merchant",
-                "migs",
-                "mollie",
-                "multisafepay",
-                "netaxept",
-                "netbanx",
-                "pagarme",
-                "pay",
-                "payfast",
-                "payflow",
-                "payment",
-                "paymentexpress",
-                "payone",
-                "paypal",
-                "payu",
-                "pin",
-                "purchase",
-                "rapid",
-                "sagepay",
-                "securepay",
-                "stripe",
-                "tala",
-                "tala-payments",
-                "targetpay",
-                "tpay",
-                "twocheckout",
-                "worldpay"
+                "checkout",
+                "creditcard",
+                "omnipay",
+                "payment"
             ],
-            "time": "2018-05-15T07:26:49+00:00"
+            "time": "2019-03-20T14:28:28+00:00"
         },
         {
             "name": "maatwebsite/laravel-sidebar",
@@ -2551,25 +2525,25 @@
         },
         {
             "name": "mcamara/laravel-localization",
-            "version": "1.3.16",
+            "version": "1.3.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mcamara/laravel-localization.git",
-                "reference": "e82a6c9d809b82afb7ae226f18ac3cb077a18754"
+                "reference": "cf89d2515d576292e65bfa5893a0efd1cc5a4064"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/e82a6c9d809b82afb7ae226f18ac3cb077a18754",
-                "reference": "e82a6c9d809b82afb7ae226f18ac3cb077a18754",
+                "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/cf89d2515d576292e65bfa5893a0efd1cc5a4064",
+                "reference": "cf89d2515d576292e65bfa5893a0efd1cc5a4064",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "~5.2.0||~5.3.0||~5.4.0||~5.5.0||~5.6.0||~5.7.0",
+                "laravel/framework": "~5.2.0||~5.3.0||~5.4.0||~5.5.0||~5.6.0||~5.7.0||~5.8.0",
                 "php": ">=7.0.0"
             },
             "require-dev": {
-                "orchestra/testbench-browser-kit": "~3.4",
-                "phpunit/phpunit": "6.0.*"
+                "orchestra/testbench-browser-kit": "~3.4|~3.8",
+                "phpunit/phpunit": "6.0.*|8.0.*"
             },
             "suggest": {
                 "ext-intl": "*"
@@ -2609,7 +2583,7 @@
                 "localization",
                 "php"
             ],
-            "time": "2018-10-30T06:33:55+00:00"
+            "time": "2019-03-05T15:37:01+00:00"
         },
         {
             "name": "moneyphp/money",
@@ -5694,16 +5668,16 @@
         },
         {
             "name": "yajra/laravel-datatables-oracle",
-            "version": "v8.13.5",
+            "version": "v8.13.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables.git",
-                "reference": "a97a173a52f2b60075f310dac39932faa377fb4f"
+                "reference": "0b6f9c0653499d73d051dc46275511fc4c9dd7f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/a97a173a52f2b60075f310dac39932faa377fb4f",
-                "reference": "a97a173a52f2b60075f310dac39932faa377fb4f",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/0b6f9c0653499d73d051dc46275511fc4c9dd7f1",
+                "reference": "0b6f9c0653499d73d051dc46275511fc4c9dd7f1",
                 "shasum": ""
             },
             "require": {
@@ -5761,7 +5735,7 @@
                 "jquery",
                 "laravel"
             ],
-            "time": "2019-02-13T01:34:34+00:00"
+            "time": "2019-03-26T05:01:51+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",

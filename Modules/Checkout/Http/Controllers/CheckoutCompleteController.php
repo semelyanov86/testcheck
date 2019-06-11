@@ -39,7 +39,7 @@ class CheckoutCompleteController extends Controller
         event(new OrderPlaced($order));
 
         session()->put('placed_order', $order);
-
+dd($order);
         return redirect()->route('checkout.complete.show');
     }
 

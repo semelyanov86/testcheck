@@ -54,6 +54,8 @@ class UserController extends Controller
 
         $user->roles()->attach($request->roles);
 
+        $user->contracts()->attach($request->contracts);
+
         Activation::complete($user, Activation::create($user)->code);
 
         return redirect()->route('admin.users.index')
@@ -80,6 +82,8 @@ class UserController extends Controller
         $user->update($request->all());
 
         $user->roles()->sync($request->roles);
+
+        $user->contracts()->sync($request->contracts);
 
         if (! Activation::completed($user) && $request->activated === '1') {
             Activation::complete($user, Activation::create($user)->code);

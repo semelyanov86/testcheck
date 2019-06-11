@@ -7,6 +7,7 @@ use Modules\User\Admin\UserTable;
 use Modules\Review\Entities\Review;
 use Illuminate\Auth\Authenticatable;
 use Modules\Product\Entities\Product;
+use Modules\Contract\Entities\Contract;
 use Modules\User\Repositories\Permission;
 use Cartalyst\Sentinel\Users\EloquentUser;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
@@ -96,6 +97,39 @@ class User extends EloquentUser implements AuthenticatableContract
     }
 
     /**
+     * Checks if a user belongs to the given Contract ID.
+     *
+     * @param int $contractId
+     * @return bool
+     */
+    public function hasContractId($contractId)
+    {
+        return $this->contracts()->whereId($contractId)->count() !== 0;
+    }
+
+    /**
+     * Checks if a user belongs to the given Contract Slug.
+     *
+     * @param string $slug
+     * @return bool
+     */
+    public function hasContractSlug($slug)
+    {
+        return $this->contracts()->whereSlug($slug)->count() !== 0;
+    }
+
+    /**
+     * Checks if a user belongs to the given Contract Name.
+     *
+     * @param string $name
+     * @return bool
+     */
+    public function hasContractName($name)
+    {
+        return $this->contracts()->where('name', $name)->count() !== 0;
+    }
+
+    /**
      * Check if the current user is activated.
      *
      * @return bool
@@ -124,6 +158,16 @@ class User extends EloquentUser implements AuthenticatableContract
     public function roles()
     {
         return $this->belongsToMany(Role::class, 'user_roles')->withTimestamps();
+    }
+
+    /**
+     * Get the contracts of the user.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function contracts()
+    {
+        return $this->belongsToMany(Contract::class, 'user_contracts')->withTimestamps();
     }
 
     /**

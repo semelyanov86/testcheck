@@ -5,6 +5,7 @@ namespace Modules\Cart\Http\Controllers;
 use Modules\Support\Country;
 use Modules\Cart\Facades\Cart;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
 {

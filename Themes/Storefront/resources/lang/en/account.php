@@ -18,10 +18,12 @@ return [
     ],
     'orders' => [
         'order_id' => 'Order ID',
+        'contract' => 'Contract',
         'date' => 'Date',
         'status' => 'Status',
         'total' => 'Total',
         'view_order' => 'View Order',
+        'edit_order' => 'Edit Order',
         'no_orders' => 'You haven\'t placed any orders yet.',
     ],
     'view_order' => [
@@ -40,6 +42,7 @@ return [
         'line_total' => 'Line Total',
         'subtotal' => 'Subtotal',
         'coupon' => 'Coupon',
+        'contract' => 'Contract',
         'total' => 'Total',
     ],
     'wishlist' => [

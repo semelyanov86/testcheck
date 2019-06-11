@@ -5,7 +5,7 @@
                 <ul class="list-inline">
                     @if (count(setting('supported_currencies')) > 1)
                         <li>
-                            <select class="top-nav-select custom-select-white" onchange="location = this.value">
+                            <select class="top-nav-select custom-select-white form-control btn-success" onchange="location = this.value">
                                 @foreach (setting('supported_currencies') as $currency)
                                     <option value="{{ route('current_currency.store', ['currency' => $currency]) }}" {{ currency() === $currency ? 'selected' : '' }}>
                                         {{ $currency }}
@@ -17,7 +17,7 @@
 
                     @if (count(supported_locales()) > 1)
                         <li>
-                            <select class="top-nav-select custom-select-white" onchange="location = this.value">
+                            <select class="top-nav-select custom-select-white form-control btn-success" onchange="location = this.value">
                                 @foreach (supported_locales() as $locale => $language)
                                     <option value="{{ localized_url($locale) }}" {{ locale() === $locale ? 'selected' : '' }}>
                                         {{ $language['name'] }}
@@ -41,7 +41,23 @@
 
                     @auth
                         <li><a href="{{ route('account.wishlist.index') }}">{{ trans('storefront::account.links.my_wishlist') }}</a></li>
+
                         <li><a href="{{ route('account.dashboard.index') }}">{{ trans('storefront::account.links.my_account') }}</a></li>
+                        <li><a href="{{ route('account.orders.index') }}">{{ trans('storefront::account.links.my_orders') }}</a></li>
+                        @if (count(contracts()) > 1)
+                            <li>
+                                <select class="top-nav-select custom-select-white btn-danger form-control" onchange="$.get( 'contract/'+this.value );">
+                                    <option value=Null >
+                                        {{ trans('storefront::contract.without_contract') }}
+                                    </option>
+                                    @foreach (contracts() as $contract)
+                                        <option value="{{ $contract->id }}" {{ contract_current() == $contract->id ? 'selected' : '' }}>
+                                            {{ $contract->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </li>
+                        @endif
                     @else
                         <li><a href="{{ route('login') }}">{{ trans('storefront::layout.log_in') }}</a></li>
                     @endauth

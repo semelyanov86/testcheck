@@ -5,7 +5,9 @@ namespace Modules\Cart;
 use Modules\Support\Money;
 use Modules\Tax\Entities\TaxRate;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Session;
 use Modules\Coupon\Entities\Coupon;
+use Modules\Contract\Entities\Contract;
 use Modules\Product\Entities\Product;
 use Modules\Shipping\Facades\ShippingMethod;
 use Darryldecode\Cart\Cart as DarryldecodeCart;
@@ -35,6 +37,13 @@ class Cart extends DarryldecodeCart
     private $coupon;
 
     /**
+     * Holds the cart contract.
+     *
+     * @var \Modules\Cart\CartContract
+     */
+    private $contract;
+
+    /**
      * Collection of cart taxes.
      *
      * @var \Illuminate\Support\Collection
@@ -49,6 +58,18 @@ class Cart extends DarryldecodeCart
     public function instance()
     {
         return $this;
+    }
+
+    /**
+     * Contract update.
+     *
+     * @return void
+     */
+    public function updateContract() {
+        if(!$this->contract) {
+            $contract_id = Session::get('CurrentContract');
+            $this->contract = Contract::find($contract_id);
+        }
     }
 
     /**
@@ -259,6 +280,17 @@ class Cart extends DarryldecodeCart
         $coupon = Coupon::with('products', 'categories')->find($couponCondition->getAttribute('coupon_id'));
 
         return $this->coupon = new CartCoupon($this, $coupon, $couponCondition);
+    }
+
+    public function contract()
+    {
+        $this->updateContract();
+
+//        if (! is_null($this->contract)) {
+//            return $this->contract;
+//        }
+
+        return $this->contract;
     }
 
     public function discount()

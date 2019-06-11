@@ -8,6 +8,7 @@ use Modules\Support\Country;
 use Modules\Tax\Entities\TaxRate;
 use Illuminate\Support\Facades\DB;
 use Modules\Coupon\Entities\Coupon;
+use Modules\Contract\Entities\Contract;
 use Modules\Order\Admin\OrderTable;
 use Modules\Support\Eloquent\Model;
 use Modules\Payment\Facades\Gateway;
@@ -61,6 +62,11 @@ class Order extends Model
         return ! is_null($this->coupon);
     }
 
+    public function hasContract()
+    {
+        return ! is_null($this->contract);
+    }
+
     public function hasTax()
     {
         return $this->taxes->isNotEmpty();
@@ -85,6 +91,11 @@ class Order extends Model
     public function coupon()
     {
         return $this->belongsTo(Coupon::class)->withTrashed();
+    }
+
+    public function contract()
+    {
+        return $this->belongsTo(Contract::class);//->withTrashed();
     }
 
     public function taxes()
@@ -225,6 +236,7 @@ class Order extends Model
                 'customer_first_name',
                 'customer_last_name',
                 'customer_email',
+                'contract_id',
                 'currency',
                 'total',
                 'status',

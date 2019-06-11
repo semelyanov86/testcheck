@@ -9,4 +9,5 @@ return [
     'theme-navy-blue' => 'Navy Blue',
     'theme-pink' => 'Pink',
     'theme-black' => 'Black',
+    'theme-b2b-green' => 'B2B green',
 ];
